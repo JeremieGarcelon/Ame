@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Ame : Synthétiseur MIDI Polyphonique Programmable (chrome)</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="" />
+<meta name="author" content="Jérémie Garcelon" />
+<meta name="copyright" content="© Jérémie Garcelon" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/AudioLoop.js"></script>
+<script type="text/javascript" src="js/SimpleMidiInput.js"></script>
+<script type="text/javascript" src="js/monad.1.2.0.js"></script>
+<script type="text/javascript" src="js/ame.js"></script>
+<style type="text/css" >
+
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<div id="global" >
+
+<h1>Ame (alpha)</h1>
+<h2>Synthétiseur MIDI Polyphonique Programmable</h2>
+<p>1. Utilises le navigateur chrome. Branche ton clavier MIDI et joue ! <strong>Si ça ne marche pas ou mal recharges la page.</strong></p>
+<p>2. Cliques sur un des preset ci-dessous pour changer le son. Observes le code (plus bas) changer.</p>
+<div id="presetbtn_1" class="btn">Sine</div>
+<div id="presetbtn_4" class="btn">3 Triangles (chacun sur un octave)</div>
+<div id="presetbtn_2" class="btn">Saw amplitude modulé par Sine</div>
+<div id="presetbtn_3" class="btn">Square fréquence modulé par Sine</div>
+<p>3. En t'inspirant de exemples précédents customises le code (c'est du javascript). <br />Appuies sur le bouton 'Utiliser pour le tracé du son' pour que tes modifications soient prises en compte.</p>
+<textarea id="codeinput" style="width: 90%; height: 100px;" >
+return this.sine[0].mod(0.5,1,0.25) * this.square[0].flow(frequency);
+</textarea>
+<div id="changebtn" class="btn" >Utiliser pour le tracé du son</div>
+<p>Tu peux utiliser 10 oscillateur de chaque sorte ( sine[0] à sine[9], square[0] à square[9] etc...) .<br />
+Pour le son : forme_onde[numero_oscillateur].flow(frequency)<br />
+Pour la modulation : forme_onde[numero_oscillateur].mod(valeur_min, valeur_max, duree_secondes)
+<br />Ne pas oublier le 'return' au début et le ';' à la fin.
+</p>
+<p>Ceci est un prototype. Soyez indulgent ;). C'est mieux avec un PC rapide. Plus tard : reglages de l'enveloppe, taille du buffer, tutoriel :) ?</p>
+
+<p style="text-align: right;">Auteur : <a rel="author" href="https://plus.google.com/109839324839207627041" target="_blank" >Jérémie Garcelon</a> &copy;</p>
+
+<div id="output" ></div>
+</div>
+
+
+</body>
+</html>
+

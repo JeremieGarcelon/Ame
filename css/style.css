@@ -1,0 +1,80 @@
+/* 
+NOTES :
+
+Scroll fuide pour les produits apple : 
+-webkit-overflow-scrolling: touch; overflow-y: scroll 
+*/
+
+/* Equivalent CSS du meta viewport */
+@-ms-viewport {width: 100vw; zoom: 100%; user-zoom: fixed;}
+@viewport {width: 100vw; zoom: 100% ; user-zoom: fixed;}
+
+/* Neutralise l'ajustement de la taille du texte pour les produits apple */
+html{-webkit-text-size-adjust: none;}
+/* Neutralise le flash lors d'un click pour les produits apple */
+body{-webkit-tap-highlight-color: rgba(0,0,0,0);} 
+/* Neutralise les pointillés autour des éléments cliqués */
+a{outline: none;}
+
+/* w&h 100% */
+/*
+html,body{
+width: 100%;
+min-height: 100%;
+height: auto !important;
+height: 100%;
+}
+*/
+
+body{margin: 0; padding: 0; font-family: sans-serif; }
+
+/* ////////////////////////////// */
+
+body{margin: 0; padding: 0; font-size: 16px; line-height: 1.6em; color: #FFFFFF; font-family: sans-serif; background-color: #808080;
+background: url('../img/background.jpg') no-repeat center center fixed; background-size: cover;
+}
+
+#main{box-sizing: border-box; width: 960px; margin: 48px auto 48px auto; padding: 48px; background-color: #FFFFFF;}
+
+p{ font-size: 16px;  margin: 1em 0 1em 0; }
+h1, h2, h3, h4{color: #FFFFFF; letter-spacing: 0.05em;}
+h1{font-size: 32px;  margin: 1em 0 0.5em 0; font-weight: bold; }
+h2{font-size: 24px; margin: 2em 0 1em 0; font-weight: bold; }
+h3{font-size: 20px; margin: 2em 0 1em 0; font-weight: bold; }
+h4{font-size: 16px; margin: 2em 0 1em 0; font-weight: bold; font-style: italic; }
+a{color: #5979FF;}
+
+pre{white-space: pre; overflow: auto; padding: 1em !important;}
+.pre-medium{max-height: 450px;}
+/* PrettyPrint, on affiche les numero de chaque ligne */
+
+.warn{background-color: #FFE0E0; color: #795959; font-size: 16px;  padding: 1em 1em 1em 1em;}
+.warn > *:first-child{margin-top: 0px;}
+.warn > *:last-child{margin-bottom: 0;}
+
+ul.bullet{margin: 1em 0 1em 0; padding-left: 1em; }
+ul.bullet li{margin: 1em 0 1em 0;}
+
+
+.table{
+background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; background-size: cover; position: relative; box-sizing: border-box; overflow: auto;
+display: table; table-layout: fixed; border-collapse: collapse; /*height: 100%;*/ width: 100%; margin: auto;
+}
+
+.col{
+background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; background-size: cover; position: relative; box-sizing: border-box; overflow: auto;
+display: table-cell; vertical-align: middle; overflow: auto;
+}
+
+.btn{
+display:inline-block; cursor: pointer; 
+padding: 0.5em 1.5em 0.5em 1.5em; margin: 0.5em; background-color: #0066CC; color:#ffffff; border-radius: 0.25em; text-shadow:0px 1px 0px rgba(255,255,255,0.3);
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24), inset 0px 39px 0px -24px rgba(255,255,255,0.1); transition: box-shadow 0.5s;
+}
+.btn:hover{
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23), inset 0px 39px 0px -24px rgba(255,255,255,0.1);
+}
+a.btn{text-decoration: none;}
+
+#global{padding: 24px; margin: 0 auto 0 auto;width: 80%; background-color: rgba(0,0,0,0.7);}
+
